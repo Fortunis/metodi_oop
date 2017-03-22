@@ -17,5 +17,10 @@ namespace simple_shapes {
 		<< a << ", b = " << b
 		<< ", c = " << c 
 		<< ", Density = " << d << endl;
+		ofst << endl;
+	}
+
+	void parallelepiped::OutParallelepiped(ofstream &ofst) {
+		Out(ofst);
 	}
 } // end simple_shapes namespace
