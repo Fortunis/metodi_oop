@@ -2,6 +2,7 @@
 #include "shape_atd.h"
 #include "ball_atd.h"
 #include "parallelepiped_atd.h"
+#include "tetrahedron_atd.h"
 
 using namespace std;
 
@@ -18,6 +19,9 @@ namespace simple_shapes {
 				break;
 			case 2:
 				sp = new parallelepiped;
+				break;
+			case 3:
+				sp = new tetrahedron;
 				break;
 			default:
 				return 0;
