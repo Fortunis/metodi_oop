@@ -13,6 +13,7 @@ namespace simple_shapes {
 	// Вывод параметров шараа в поток
 	void ball::Out(ofstream &ofst) {
 		ofst << "It is Ball: r = " << r << ", Density = "<< d << endl;
+		ofst << endl;
 	}
 
 	double ball::Volume() {
