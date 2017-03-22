@@ -54,8 +54,8 @@ namespace simple_shapes {
 	// ¬ывод содержимого контейнера в указанный поток
 	void container::Out(ofstream &ofst) {
 		ofst << "Container contains " << size
-		<< " elements." << endl;
-	
+			<< " elements." << endl;
+
 		shape* current;
 
 		for (int i = 0; i < size; i++)
@@ -65,6 +65,26 @@ namespace simple_shapes {
 
 			current = Current->cont;
 			current->Out(ofst);
+
+			current = nullptr;
+			delete current;
+		}
+	}
+
+	void container::Volume(ofstream &ofst) {
+		ofst << "Container contains " << size
+			<< " elements." << endl;
+
+		shape* current;
+
+		for (int i = 0; i < size; i++)
+		{
+			ofst << i << ": ";
+			Current = Current->Next;
+
+			current = Current->cont;
+			current->Out(ofst);
+			ofst << "volume = " << current->Volume() << endl;
 
 			current = nullptr;
 			delete current;

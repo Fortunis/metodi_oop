@@ -18,4 +18,8 @@ namespace simple_shapes {
 		<< ", c = " << c 
 		<< ", Density = " << d << endl;
 	}
+
+	double parallelepiped::Volume() {
+		return a*b*c;
+	}
 } // end simple_shapes namespace

@@ -19,6 +19,7 @@ namespace simple_shapes {
 		void Add(shape &s);
 		void In(ifstream &ifst);
 		void Out(ofstream &ofst);
+		void Volume(ofstream &ofst);
 		container() {};
 		~container() { Clear(); };
 	};
