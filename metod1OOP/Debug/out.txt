@@ -1,6 +1,14 @@
 Filled container. 
-Container contains 2 elements.
-It is Ball: r = 3, Density = 6.5
-It is Parallelepiped: a = 4, b = 4, c = 4, Density = 4.5
+Container contains 5 elements.
+It is Ball: r = 1, Density = 4
+temperature = 7
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+temperature = 7
+It is Ball: r = 6, Density = 18
+temperature = 7
+It is Parallelepiped: a = 44, b = 21, c = 1, Density = 15
+temperature = 7
+It is Ball: r = 1, Density = 15
+temperature = 16
 Empty container. 
 Container contains 0 elements.

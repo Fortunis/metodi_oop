@@ -7,6 +7,7 @@ using namespace std;
 namespace simple_shapes {
 	// структура, обобщающая все имеющиеся фигуры
 	class shape {
+		int temperature;
 	public:
 		shape() {};
 		virtual ~shape() {};

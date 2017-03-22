@@ -25,4 +25,16 @@ namespace simple_shapes {
 		sp->InData(ifst);
 		return sp;
 	}
+	//----------------------------------------------------
+	// Ввод параметров фигуры
+	void shape::InData(ifstream &ifst) {
+		ifst >> temperature;
+	}
+
+	//----------------------------------------------------
+	// Вывод параметров фигуры
+	void shape::Out(ofstream &ofst) {
+		ofst << "temperature = " << temperature;
+	}
+
 } // end simple_shapes namespace
