@@ -21,6 +21,13 @@ namespace simple_shapes {
 
 	void ball::OutBall(ofstream &ofst) {
 		Out(ofst);
+
+		ofst << endl;
+
+	}
+
+	double ball::Volume() {
+		return 4 * 3.14*r*r*r / 3;
 	}
 
 } // end simple_shapes namespace

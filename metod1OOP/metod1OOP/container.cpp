@@ -71,6 +71,24 @@ namespace simple_shapes {
 		}
 	}
 
+
+	void container::Volume(ofstream &ofst) {
+		ofst << "Container contains " << size
+			<< " elements." << endl;
+		shape* current;
+
+		for (int i = 0; i < size; i++)
+		{	
+			ofst << i << ": ";
+			Current = Current->Next;
+			current = Current->cont;
+			current->Out(ofst);
+			ofst << "volume = " << current->Volume() << endl;
+			current = nullptr;
+			delete current;
+		}
+	}
+=======
 	void container::OutBall(ofstream &ofst) {
 		ofst << "Only balls." << endl;
 
@@ -123,4 +141,36 @@ namespace simple_shapes {
 			delete current;
 		}
 	}
+
+	//-----------------------------------------------------
+	// Сортировка содержимого контейнера
+	void container::Sort() {
+		container *s, *ptr;
+		shape *temp;
+		if (this->Tail == nullptr)
+		{
+			return;
+		}
+		s = this->Tail->Next;
+
+		while (s != this->Tail)
+		{
+			ptr = s->Next;
+			while (ptr != this->Tail->Next)
+			{
+				if (ptr != this->Tail->Next)
+				{
+					if (s->cont->Compare(*ptr->cont))
+					{
+						temp = s->cont;
+						s->cont = ptr->cont;
+						ptr->cont = temp;
+					}
+				}
+				ptr = ptr->Next;
+			}
+			s = s->Next;
+		}
+	}
+
 } // end simple_shapes namespace

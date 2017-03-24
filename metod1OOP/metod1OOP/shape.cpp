@@ -30,6 +30,7 @@ namespace simple_shapes {
 		return sp;
 	}
 
+
 	void shape::OutBall(ofstream &ofst) {
 		ofst << endl;  // пустая строка
 	}
@@ -52,4 +53,7 @@ namespace simple_shapes {
 		ofst << "temperature = " << temperature;
 	}
 
+	bool shape::Compare(shape &other) {
+		return Volume() < other.Volume();
+	}
 } // end simple_shapes namespace
