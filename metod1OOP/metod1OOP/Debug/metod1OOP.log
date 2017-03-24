@@ -1,11 +1,17 @@
-﻿  shape.cpp
+﻿  tetrahedron.cpp
+  shape.cpp
   parallelepiped.cpp
   container.cpp
   Создание кода...
   Компиляция...
   ball.cpp
   Создание кода...
+<<<<<<< HEAD
   Пропуск... (изменения не обнаружены)
   main.cpp
   metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\FiltredOutput\metod1OOP\Debug\metod1OOP.exe
   metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\FiltredOutput\metod1OOP\Debug\metod1OOP.pdb (Partial PDB)
+=======
+  metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\NewClass\metod1OOP\Debug\metod1OOP.exe
+  metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\NewClass\metod1OOP\Debug\metod1OOP.pdb (Partial PDB)
+>>>>>>> refs/remotes/origin/NewClass
