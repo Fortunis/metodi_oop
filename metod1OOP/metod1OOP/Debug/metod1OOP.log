@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 ﻿  main.cpp
+<<<<<<< HEAD
   metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\NewFunction\metod1OOP\Debug\metod1OOP.exe
   metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\NewFunction\metod1OOP\Debug\metod1OOP.pdb (Partial PDB)
 =======
@@ -14,3 +15,7 @@
   metod1OOP.vcxproj -> C:\Users\Евгений\Documents\GitHub\metodi_oop\metod1OOP\Debug\metod1OOP.exe
   metod1OOP.vcxproj -> C:\Users\Евгений\Documents\GitHub\metodi_oop\metod1OOP\Debug\metod1OOP.pdb (Partial PDB)
 >>>>>>> refs/remotes/origin/NewClass
+=======
+  metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\WithSort\metod1OOP\Debug\metod1OOP.exe
+  metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\WithSort\metod1OOP\Debug\metod1OOP.pdb (Partial PDB)
+>>>>>>> origin/NewFunction

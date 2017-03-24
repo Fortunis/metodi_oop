@@ -24,6 +24,9 @@ namespace simple_shapes {
 		void OutBall(ofstream &ofst);
 		void OutParallelepiped(ofstream &ofst);
 		void OutTetrahedron(ofstream &ofst);
+
+		void Sort();   // сортировка контейнера
+
 		container() {};
 		~container() { Clear(); };
 	};

@@ -1,6 +1,10 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
 <<<<<<< HEAD
+<<<<<<< HEAD
 Debug|Win32|C:\Users\Евгений\Documents\Методы программирования\2\NewFunction\metod1OOP\|
 =======
 Debug|Win32|C:\Users\Евгений\Documents\GitHub\metodi_oop\metod1OOP\|
 >>>>>>> refs/remotes/origin/NewClass
+=======
+Debug|Win32|C:\Users\Евгений\Documents\Методы программирования\2\WithSort\metod1OOP\|
+>>>>>>> origin/NewFunction

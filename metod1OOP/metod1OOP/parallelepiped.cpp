@@ -18,13 +18,12 @@ namespace simple_shapes {
 		<< a << ", b = " << b
 		<< ", c = " << c 
 		<< ", Density = " << d << endl;
+		shape::Out(ofst);
 		ofst << endl;
 	}
 
 	void parallelepiped::OutParallelepiped(ofstream &ofst) {
 		Out(ofst);
-		shape::Out(ofst);
-		ofst << endl;
 	}
 
 	double parallelepiped::Volume() {
