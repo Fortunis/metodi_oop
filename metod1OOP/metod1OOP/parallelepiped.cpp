@@ -8,6 +8,7 @@ namespace simple_shapes {
 	void parallelepiped::InData(ifstream &ifst)
 	{
 		ifst >> a >> b >> c >> d;
+		shape::InData(ifst);
 	}
 
 	// ¬ывод параметров параллелепипеда в поток
@@ -17,6 +18,13 @@ namespace simple_shapes {
 		<< a << ", b = " << b
 		<< ", c = " << c 
 		<< ", Density = " << d << endl;
+		ofst << endl;
+	}
+
+	void parallelepiped::OutParallelepiped(ofstream &ofst) {
+		Out(ofst);
+		shape::Out(ofst);
+		ofst << endl;
 	}
 
 	double parallelepiped::Volume() {

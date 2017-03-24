@@ -20,6 +20,10 @@ namespace simple_shapes {
 		void In(ifstream &ifst);
 		void Out(ofstream &ofst);
 		void Volume(ofstream &ofst);
+
+		void OutBall(ofstream &ofst);
+		void OutParallelepiped(ofstream &ofst);
+		void OutTetrahedron(ofstream &ofst);
 		container() {};
 		~container() { Clear(); };
 	};

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
 ﻿  main.cpp
   metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\NewFunction\metod1OOP\Debug\metod1OOP.exe
   metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\NewFunction\metod1OOP\Debug\metod1OOP.pdb (Partial PDB)
+=======
+﻿  tetrahedron.cpp
+  shape.cpp
+  parallelepiped.cpp
+  main.cpp
+  container.cpp
+  ball.cpp
+  Создание кода...
+  LINK : не найден или не выполнена сборка C:\Users\Евгений\Documents\GitHub\metodi_oop\metod1OOP\Debug\metod1OOP.exe при последней инкрементной компоновке; выполняется полная компоновка
+  metod1OOP.vcxproj -> C:\Users\Евгений\Documents\GitHub\metodi_oop\metod1OOP\Debug\metod1OOP.exe
+  metod1OOP.vcxproj -> C:\Users\Евгений\Documents\GitHub\metodi_oop\metod1OOP\Debug\metod1OOP.pdb (Partial PDB)
+>>>>>>> refs/remotes/origin/NewClass

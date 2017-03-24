@@ -7,13 +7,15 @@ using namespace std;
 using namespace simple_shapes;
 
 int main(int argc, char* argv[]) {
-	/*if(argc !=3) {
+	if(argc !=3) {
 		cout << "incorrect command line! "
 		"Waited: command infile outfile" << endl;
 		exit(1);
-	}*/
-	argv[1] = "in.txt";
-	argv[2] = "out.txt";
+
+	}
+	
+	//argv[1] = "in.txt";
+	//argv[2] = "out.txt";
 
 	ifstream ifst(argv[1]);
 	ofstream ofst(argv[2]);
@@ -22,7 +24,9 @@ int main(int argc, char* argv[]) {
 	container c;
 	c.In(ifst);
 	ofst << "Filled container. " << endl;
+
 	c.Volume(ofst);
+
 	c.Clear();
 	ofst << "Empty container. " << endl;
 	c.Out(ofst);
