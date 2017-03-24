@@ -106,4 +106,21 @@ namespace simple_shapes {
 			delete current;
 		}
 	}
+	void container::OutTetrahedron(ofstream &ofst) {
+		ofst << "Only tetrahedrons." << endl;
+
+		shape* current;
+
+		for (int i = 0; i < size; i++)
+		{
+
+			Current = Current->Next;
+
+			current = Current->cont;
+			current->OutTetrahedron(ofst);
+
+			current = nullptr;
+			delete current;
+		}
+	}
 } // end simple_shapes namespace

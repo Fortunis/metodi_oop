@@ -10,6 +10,7 @@ namespace simple_shapes {
 	public:
 		void InData(ifstream &ifst);
 		void Out(ofstream &ofst);
+		void OutTetrahedron(ofstream &ofst);
 		tetrahedron() {};
 		~tetrahedron() {};
 	};

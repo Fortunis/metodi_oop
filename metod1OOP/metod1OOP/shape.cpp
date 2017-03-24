@@ -37,6 +37,9 @@ namespace simple_shapes {
 	void shape::OutParallelepiped(ofstream &ofst) {
 		ofst << endl;  // пуста€ строка
 	}
+	void shape::OutTetrahedron(ofstream &ofst) {
+		ofst << endl;  // пуста€ строка
+	}
 	//----------------------------------------------------
 	// ¬вод параметров фигуры
 	void shape::InData(ifstream &ifst) {

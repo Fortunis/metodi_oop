@@ -16,6 +16,7 @@ namespace simple_shapes {
 		virtual void Out(ofstream &ofst) = 0;
 		virtual void OutBall(ofstream &ofst);
 		virtual void OutParallelepiped(ofstream &ofst);
+		virtual void OutTetrahedron(ofstream &ofst);
 	};
 } // end simple_shapes namespace
 #endif
