@@ -26,9 +26,9 @@ int main(int argc, char* argv[]) {
 	ofst << "Sorted container. " << endl;
 	c.Sort();
 	c.Volume(ofst);
+	//c.Out(ofst);
 	c.Clear();
 	ofst << "Empty container. " << endl;
-	c.Out(ofst);
 	cout << "Stop"<< endl;
 	return 0;
 }

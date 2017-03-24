@@ -88,7 +88,7 @@ namespace simple_shapes {
 			delete current;
 		}
 	}
-=======
+
 	void container::OutBall(ofstream &ofst) {
 		ofst << "Only balls." << endl;
 
