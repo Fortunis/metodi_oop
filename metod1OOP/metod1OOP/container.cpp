@@ -54,8 +54,8 @@ namespace simple_shapes {
 	// ¬ывод содержимого контейнера в указанный поток
 	void container::Out(ofstream &ofst) {
 		ofst << "Container contains " << size
-		<< " elements." << endl;
-	
+			<< " elements." << endl;
+
 		shape* current;
 
 		for (int i = 0; i < size; i++)
