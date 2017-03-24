@@ -17,6 +17,7 @@ namespace simple_shapes {
 		<< a << ", b = " << b
 		<< ", c = " << c 
 		<< ", Density = " << d << endl;
+		ofst << endl;
 	}
 
 	double parallelepiped::Volume() {

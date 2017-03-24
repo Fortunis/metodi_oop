@@ -40,7 +40,7 @@ namespace simple_shapes {
 		}
 	}
 
-	
+
 	// ¬вод содержимого контейнера из указанного потока
 	void container::In(ifstream &ifst) {
 		int tmp = 0;
@@ -50,7 +50,7 @@ namespace simple_shapes {
 		}
 	}
 
-	
+
 	// ¬ывод содержимого контейнера в указанный поток
 	void container::Out(ofstream &ofst) {
 		ofst << "Container contains " << size
@@ -90,4 +90,36 @@ namespace simple_shapes {
 			delete current;
 		}
 	}
+
+	//-----------------------------------------------------
+	// —ортировка содержимого контейнера
+	void container::Sort() {
+		container *s, *ptr;
+		shape *temp;
+		if (this->Tail == nullptr)
+		{
+			return;
+		}
+		s = this->Tail->Next;
+
+		while (s != this->Tail)
+		{
+			ptr = s->Next;
+			while (ptr != this->Tail->Next)
+			{
+				if (ptr != this->Tail->Next)
+				{
+					if (s->cont->Compare(*ptr->cont))
+					{
+						temp = s->cont;
+						s->cont = ptr->cont;
+						ptr->cont = temp;
+					}
+				}
+				ptr = ptr->Next;
+			}
+			s = s->Next;
+		}
+	}
+
 } // end simple_shapes namespace

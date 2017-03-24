@@ -25,4 +25,8 @@ namespace simple_shapes {
 		sp->InData(ifst);
 		return sp;
 	}
+
+	bool shape::Compare(shape &other) {
+		return Volume() < other.Volume();
+	}
 } // end simple_shapes namespace

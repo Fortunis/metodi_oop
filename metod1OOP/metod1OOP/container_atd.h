@@ -20,6 +20,7 @@ namespace simple_shapes {
 		void In(ifstream &ifst);
 		void Out(ofstream &ofst);
 		void Volume(ofstream &ofst);
+		void Sort();   // сортировка контейнера
 		container() {};
 		~container() { Clear(); };
 	};
