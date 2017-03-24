@@ -9,6 +9,7 @@ namespace simple_shapes {
 	public:
 		void InData(ifstream &ifst);
 		void Out(ofstream &ofst);
+		void OutParallelepiped(ofstream &ofst);
 		parallelepiped() {};
 		~parallelepiped() {};
 	};

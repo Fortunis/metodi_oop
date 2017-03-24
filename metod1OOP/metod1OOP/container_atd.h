@@ -19,6 +19,8 @@ namespace simple_shapes {
 		void Add(shape &s);
 		void In(ifstream &ifst);
 		void Out(ofstream &ofst);
+		void OutBall(ofstream &ofst);
+		void OutParallelepiped(ofstream &ofst);
 		container() {};
 		~container() { Clear(); };
 	};
