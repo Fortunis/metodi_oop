@@ -14,6 +14,8 @@ namespace simple_shapes {
 		static shape* In(ifstream &ifst);
 		virtual void InData(ifstream &ifst) = 0;
 		virtual void Out(ofstream &ofst) = 0;
+		virtual void OutBall(ofstream &ofst);
+		virtual void OutParallelepiped(ofstream &ofst);
 	};
 } // end simple_shapes namespace
 #endif

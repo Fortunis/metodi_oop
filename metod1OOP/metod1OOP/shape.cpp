@@ -29,6 +29,14 @@ namespace simple_shapes {
 		sp->InData(ifst);
 		return sp;
 	}
+
+	void shape::OutBall(ofstream &ofst) {
+		ofst << endl;  // пуста€ строка
+	}
+
+	void shape::OutParallelepiped(ofstream &ofst) {
+		ofst << endl;  // пуста€ строка
+	}
 	//----------------------------------------------------
 	// ¬вод параметров фигуры
 	void shape::InData(ifstream &ifst) {
