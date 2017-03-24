@@ -13,13 +13,19 @@ int main(int argc, char* argv[]) {
 		exit(1);
 	}
 	
+	//argv[1] = "in.txt";
+	//argv[2] = "out.txt";
+
 	ifstream ifst(argv[1]);
 	ofstream ofst(argv[2]);
+	
 	cout << "Start"<< endl;
 	container c;
 	c.In(ifst);
 	ofst << "Filled container. " << endl;
-	c.Out(ofst);
+	ofst << "Sorted container. " << endl;
+	c.Sort();
+	c.Volume(ofst);
 	c.Clear();
 	ofst << "Empty container. " << endl;
 	c.Out(ofst);

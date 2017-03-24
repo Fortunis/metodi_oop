@@ -1,6 +1,45 @@
+<<<<<<< HEAD
+=======
 Filled container. 
-Container contains 2 elements.
-It is Ball: r = 3, Density = 6.5
-It is Parallelepiped: a = 4, b = 4, c = 4, Density = 4.5
+Container contains 6 elements.
+0: It is Ball: r = 1000, Density = 1
+
+volume = 4.18667e+09
+1: It is Ball: r = 1, Density = 4
+
+volume = 4.18667
+2: It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+
+volume = 6
+3: It is Ball: r = 6, Density = 18
+
+volume = 904.32
+4: It is Parallelepiped: a = 3, b = 2, c = 1, Density = 15
+
+volume = 6
+5: It is Ball: r = 2000, Density = 2
+
+volume = 3.34933e+10
+Sorted container. 
+Container contains 6 elements.
+0: It is Ball: r = 2000, Density = 2
+
+volume = 3.34933e+10
+1: It is Ball: r = 1000, Density = 1
+
+volume = 4.18667e+09
+2: It is Ball: r = 6, Density = 18
+
+volume = 904.32
+3: It is Parallelepiped: a = 3, b = 2, c = 1, Density = 15
+
+volume = 6
+4: It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+
+volume = 6
+5: It is Ball: r = 1, Density = 4
+
+volume = 4.18667
 Empty container. 
 Container contains 0 elements.
+>>>>>>> origin/NewFunction

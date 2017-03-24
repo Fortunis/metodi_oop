@@ -9,6 +9,8 @@ namespace simple_shapes {
 	public:
 		void InData(ifstream &ifst);
 		void Out(ofstream &ofst);
+		double Volume();
+		void OutParallelepiped(ofstream &ofst);
 		parallelepiped() {};
 		~parallelepiped() {};
 	};
