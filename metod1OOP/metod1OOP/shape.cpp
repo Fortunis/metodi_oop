@@ -37,5 +37,16 @@ namespace simple_shapes {
 	void shape::OutParallelepiped(ofstream &ofst) {
 		ofst << endl;  // пустая строка
 	}
+	//----------------------------------------------------
+	// Ввод параметров фигуры
+	void shape::InData(ifstream &ifst) {
+		ifst >> temperature;
+	}
+
+	//----------------------------------------------------
+	// Вывод параметров фигуры
+	void shape::Out(ofstream &ofst) {
+		ofst << "temperature = " << temperature;
+	}
 
 } // end simple_shapes namespace
