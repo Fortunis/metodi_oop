@@ -4,9 +4,10 @@
 namespace simple_shapes {
 	// параллелепипед
 	class parallelepiped: public shape {
+	public:
 		int a, b, c; // стороны
 		float d; //плотность(density)
-	public:
+
 		void InData(ifstream &ifst);
 		void Out(ofstream &ofst);
 		double Volume();

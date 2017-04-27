@@ -5,9 +5,9 @@
 namespace simple_shapes {
 	// шар
 	class ball:public shape {
+	public:
 		int r; // радиус
 		float d; //плотность(density)
-	public:
 		void InData(ifstream &ifst);
 		void Out(ofstream &ofst);
 

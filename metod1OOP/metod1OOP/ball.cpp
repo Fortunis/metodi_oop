@@ -21,9 +21,6 @@ namespace simple_shapes {
 
 	void ball::OutBall(ofstream &ofst) {
 		Out(ofst);
-
-		ofst << endl;
-
 	}
 
 	double ball::Volume() {

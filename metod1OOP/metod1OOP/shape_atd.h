@@ -7,7 +7,7 @@ using namespace std;
 namespace simple_shapes {
 	// структура, обобщающая все имеющиеся фигуры
 	class shape {
-		int temperature;
+		
 	public:
 		shape() {};
 		virtual ~shape() {};
@@ -21,7 +21,7 @@ namespace simple_shapes {
 		virtual void OutTetrahedron(ofstream &ofst);
 
 		bool Compare(shape &other);
-
+		int temperature;
 	};
 } // end simple_shapes namespace
 #endif

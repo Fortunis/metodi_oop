@@ -5,9 +5,9 @@
 namespace simple_shapes {
 	// шар
 	class tetrahedron :public shape {
+	public:
 		int l; // длина стороны
 		float d; //плотность(density)
-	public:
 		void InData(ifstream &ifst);
 		void Out(ofstream &ofst);
 		double Volume();

@@ -1,22 +1,2 @@
 Filled container. 
-Sorted container. 
-Container contains 6 elements.
-0: It is Ball: r = 2000, Density = 2
-temperature = 7
-volume = 3.34933e+10
-1: It is Ball: r = 1000, Density = 1
-temperature = 7
-volume = 4.18667e+09
-2: It is Tetrahedron: l = 6, Density = 18
-temperature = 7
-volume = 25.4558
-3: It is Parallelepiped: a = 3, b = 2, c = 1, Density = 15
-temperature = 7
-volume = 6
-4: It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
-temperature = 7
-volume = 6
-5: It is Ball: r = 1, Density = 4
-temperature = 7
-volume = 4.18667
-Empty container. 
+Container contains 1 elements.

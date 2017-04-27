@@ -32,14 +32,17 @@ namespace simple_shapes {
 
 
 	void shape::OutBall(ofstream &ofst) {
-		ofst << endl;  // пустая строка
+		return;
+		//ofst << endl;  // пустая строка
 	}
 
 	void shape::OutParallelepiped(ofstream &ofst) {
-		ofst << endl;  // пустая строка
+		return;
+		//ofst << endl;  // пустая строка
 	}
 	void shape::OutTetrahedron(ofstream &ofst) {
-		ofst << endl;  // пустая строка
+		return;
+		//ofst << endl;  // пустая строка
 	}
 	//----------------------------------------------------
 	// Ввод параметров фигуры
