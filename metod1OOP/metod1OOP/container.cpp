@@ -10,30 +10,30 @@ namespace simple_shapes {
 	// (освобождение памяти)
 	void container::Clear() {
 		while (size != 0) {
-			container *temp = Head->Next;
-			delete Head;
-			Head = temp;
+			container *temp = head->next;
+			delete head;
+			head = temp;
 			--size;
 		}
 
-		Head = nullptr;
-		Tail = nullptr;
-		Current = nullptr;
+		head = nullptr;
+		tail = nullptr;
+		current = nullptr;
 	}
 
 	void container::Add(shape &s) {
 		++size;
 		container* temp = new container;
 		temp->cont = &s;
-		temp->Next = Head;
-		Current = temp;
+		temp->next = head;
+		current = temp;
 
-		if (Head != nullptr) {
-			Tail->Next = temp;
-			Tail = temp;
+		if (head != nullptr) {
+			tail->next = temp;
+			tail = temp;
 		}
 		else {
-			Head = Tail = temp;
+			head = tail = temp;
 		}
 	}
 
@@ -73,17 +73,17 @@ namespace simple_shapes {
 				ofst << "Container is empty:\n";
 			}
 
-			shape* current;
+			shape* currentshape;
 
 			for (int i = 0; i < size; i++) {
 
-				Current = Current->Next;
+				current = current->next;
 
-				current = Current->cont;
-				current->Out(ofst);
+				currentshape = current->cont;
+				currentshape->Out(ofst);
 
-				current = nullptr;
-				delete current;
+				currentshape = nullptr;
+				delete currentshape;
 			}
 		}
 	}
@@ -103,16 +103,16 @@ namespace simple_shapes {
 			else {
 				ofst << "Container is empty:\n";
 			}
-			shape* current;
+			shape* currentshape;
 
 			for (int i = 0; i < size; i++) {
 				ofst << i << ": ";
-				Current = Current->Next;
-				current = Current->cont;
-				current->Out(ofst);
-				ofst << "volume = " << current->Volume() << endl;
-				current = nullptr;
-				delete current;
+				current = current->next;
+				currentshape = current->cont;
+				currentshape->Out(ofst);
+				ofst << "volume = " << currentshape->Volume() << endl;
+				currentshape = nullptr;
+				delete currentshape;
 			}
 		}
 	}
@@ -128,17 +128,17 @@ namespace simple_shapes {
 			}
 			ofst << "Only balls." << endl;
 
-			shape* current;
+			shape* currentshape;
 
 			for (int i = 0; i < size; i++) {
 
-				Current = Current->Next;
+				current = current->next;
 
-				current = Current->cont;
-				current->OutBall(ofst);
+				currentshape = current->cont;
+				currentshape->OutBall(ofst);
 
-				current = nullptr;
-				delete current;
+				currentshape = nullptr;
+				delete currentshape;
 			}
 		}
 	}
@@ -154,17 +154,17 @@ namespace simple_shapes {
 			}
 			ofst << "Only parallelepipeds." << endl;
 
-			shape* current;
+			shape* currentshape;
 
 			for (int i = 0; i < size; i++) {
 
-				Current = Current->Next;
+				current = current->next;
 
-				current = Current->cont;
-				current->OutParallelepiped(ofst);
+				currentshape = current->cont;
+				currentshape->OutParallelepiped(ofst);
 
-				current = nullptr;
-				delete current;
+				currentshape = nullptr;
+				delete currentshape;
 			}
 		}
 	}
@@ -180,17 +180,17 @@ namespace simple_shapes {
 			}
 			ofst << "Only tetrahedrons." << endl;
 
-			shape* current;
+			shape* currentshape;
 
 			for (int i = 0; i < size; i++) {
 
-				Current = Current->Next;
+				current = current->next;
 
-				current = Current->cont;
-				current->OutTetrahedron(ofst);
+				currentshape = current->cont;
+				currentshape->OutTetrahedron(ofst);
 
-				current = nullptr;
-				delete current;
+				currentshape = nullptr;
+				delete currentshape;
 			}
 		}
 	}
@@ -200,24 +200,24 @@ namespace simple_shapes {
 	void container::Sort() {
 		container *s, *ptr;
 		shape *temp;
-		if (this->Tail == nullptr) {
+		if (this->tail == nullptr) {
 			return;
 		}
-		s = this->Tail->Next;
+		s = this->tail->next;
 
-		while (s != this->Tail) {
-			ptr = s->Next;
-			while (ptr != this->Tail->Next) {
-				if (ptr != this->Tail->Next) {
+		while (s != this->tail) {
+			ptr = s->next;
+			while (ptr != this->tail->next) {
+				if (ptr != this->tail->next) {
 					if (s->cont->Compare(*ptr->cont)) {
 						temp = s->cont;
 						s->cont = ptr->cont;
 						ptr->cont = temp;
 					}
 				}
-				ptr = ptr->Next;
+				ptr = ptr->next;
 			}
-			s = s->Next;
+			s = s->next;
 		}
 	}
 

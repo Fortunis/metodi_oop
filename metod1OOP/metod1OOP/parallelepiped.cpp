@@ -24,8 +24,7 @@ namespace simple_shapes {
 	}
 
 	// ¬ывод параметров параллелепипеда в поток
-	void parallelepiped::Out(ofstream &ofst)
-	{
+	void parallelepiped::Out(ofstream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
