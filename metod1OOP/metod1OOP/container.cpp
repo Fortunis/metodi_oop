@@ -1,4 +1,5 @@
 #include "container_atd.h"
+#include <iostream>
 //#include <fstream>
 //#include "shape_atd.h"
 
@@ -8,8 +9,7 @@ namespace simple_shapes {
 	// Очистка контейнера от элементов
 	// (освобождение памяти)
 	void container::Clear() {
-		while (size != 0)
-		{
+		while (size != 0) {
 			container *temp = Head->Next;
 			delete Head;
 			Head = temp;
@@ -21,21 +21,18 @@ namespace simple_shapes {
 		Current = nullptr;
 	}
 
-	void container::Add(shape &s)
-	{
+	void container::Add(shape &s) {
 		++size;
 		container* temp = new container;
 		temp->cont = &s;
 		temp->Next = Head;
 		Current = temp;
 
-		if (Head != nullptr)
-		{
+		if (Head != nullptr) {
 			Tail->Next = temp;
 			Tail = temp;
 		}
-		else
-		{
+		else {
 			Head = Tail = temp;
 		}
 	}
@@ -43,102 +40,158 @@ namespace simple_shapes {
 
 	// Ввод содержимого контейнера из указанного потока
 	void container::In(ifstream &ifst) {
-		int tmp = 0;
-		while (!ifst.eof())
-		{
-			Add(*shape::In(ifst));
+		if (!ifst) {
+			cerr << "Error: Unable to open input file" << endl;
+			return;
+		}
+		else {
+			int tmp = 0;
+			if (ifst.eof()) {
+				cerr << "Empty File!" << endl;
+				exit(1);
+			}
+			while (!ifst.eof()) {
+				Add(*shape::In(ifst));
+			}
 		}
 	}
 
 
 	// Вывод содержимого контейнера в указанный поток
 	void container::Out(ofstream &ofst) {
-		ofst << "Container contains " << size
-			<< " elements." << endl;
+		if (!ofst) {
+			cerr << "Error: Unable to open output file" << endl;
+			return;
+		}
+		else {
+			if (size) {
+				ofst << "Container is filled:\n";
+				ofst << "Container contains " << size
+					<< " elements." << endl;
+			}
+			else {
+				ofst << "Container is empty:\n";
+			}
 
-		shape* current;
+			shape* current;
 
-		for (int i = 0; i < size; i++)
-		{
+			for (int i = 0; i < size; i++) {
 
-			Current = Current->Next;
+				Current = Current->Next;
 
-			current = Current->cont;
-			current->Out(ofst);
+				current = Current->cont;
+				current->Out(ofst);
 
-			current = nullptr;
-			delete current;
+				current = nullptr;
+				delete current;
+			}
 		}
 	}
 
 
 	void container::Volume(ofstream &ofst) {
-		ofst << "Container contains " << size
-			<< " elements." << endl;
-		shape* current;
+		if (!ofst) {
+			cerr << "Error: Unable to open output file" << endl;
+			return;
+		}
+		else {
+			if (size) {
+				ofst << "Container is filled:\n";
+				ofst << "Container contains " << size
+					<< " elements." << endl;
+			}
+			else {
+				ofst << "Container is empty:\n";
+			}
+			shape* current;
 
-		for (int i = 0; i < size; i++)
-		{	
-			ofst << i << ": ";
-			Current = Current->Next;
-			current = Current->cont;
-			current->Out(ofst);
-			ofst << "volume = " << current->Volume() << endl;
-			current = nullptr;
-			delete current;
+			for (int i = 0; i < size; i++) {
+				ofst << i << ": ";
+				Current = Current->Next;
+				current = Current->cont;
+				current->Out(ofst);
+				ofst << "volume = " << current->Volume() << endl;
+				current = nullptr;
+				delete current;
+			}
 		}
 	}
 
 	void container::OutBall(ofstream &ofst) {
-		ofst << "Only balls." << endl;
+		if (!ofst) {
+			cerr << "Error: Unable to open output file" << endl;
+			exit(1);
+		}
+		else {
+			if (!size) {
+				ofst << "Container is empty:\n";
+			}
+			ofst << "Only balls." << endl;
 
-		shape* current;
+			shape* current;
 
-		for (int i = 0; i < size; i++)
-		{
+			for (int i = 0; i < size; i++) {
 
-			Current = Current->Next;
+				Current = Current->Next;
 
-			current = Current->cont;
-			current->OutBall(ofst);
+				current = Current->cont;
+				current->OutBall(ofst);
 
-			current = nullptr;
-			delete current;
+				current = nullptr;
+				delete current;
+			}
 		}
 	}
 
 	void container::OutParallelepiped(ofstream &ofst) {
-		ofst << "Only parallelepipeds." << endl;
+		if (!ofst) {
+			cerr << "Error: Unable to open output file" << endl;
+			exit(1);
+		}
+		else {
+			if (!size) {
+				ofst << "Container is empty:\n";
+			}
+			ofst << "Only parallelepipeds." << endl;
 
-		shape* current;
+			shape* current;
 
-		for (int i = 0; i < size; i++)
-		{
+			for (int i = 0; i < size; i++) {
 
-			Current = Current->Next;
+				Current = Current->Next;
 
-			current = Current->cont;
-			current->OutParallelepiped(ofst);
+				current = Current->cont;
+				current->OutParallelepiped(ofst);
 
-			current = nullptr;
-			delete current;
+				current = nullptr;
+				delete current;
+			}
 		}
 	}
+
 	void container::OutTetrahedron(ofstream &ofst) {
-		ofst << "Only tetrahedrons." << endl;
+		if (!ofst) {
+			cerr << "Error: Unable to open output file" << endl;
+			exit(1);
+		}
+		else {
+			if (!size) {
+				ofst << "Container is empty:\n";
+			}
+			ofst << "Only tetrahedrons." << endl;
 
-		shape* current;
+			shape* current;
 
-		for (int i = 0; i < size; i++)
-		{
+			for (int i = 0; i < size; i++) {
 
-			Current = Current->Next;
+				Current = Current->Next;
 
-			current = Current->cont;
-			current->OutTetrahedron(ofst);
+				current = Current->cont;
+				current->OutTetrahedron(ofst);
 
-			current = nullptr;
-			delete current;
+				current = nullptr;
+				delete current;
+			}
 		}
 	}
 
@@ -147,21 +200,16 @@ namespace simple_shapes {
 	void container::Sort() {
 		container *s, *ptr;
 		shape *temp;
-		if (this->Tail == nullptr)
-		{
+		if (this->Tail == nullptr) {
 			return;
 		}
 		s = this->Tail->Next;
 
-		while (s != this->Tail)
-		{
+		while (s != this->Tail) {
 			ptr = s->Next;
-			while (ptr != this->Tail->Next)
-			{
-				if (ptr != this->Tail->Next)
-				{
-					if (s->cont->Compare(*ptr->cont))
-					{
+			while (ptr != this->Tail->Next) {
+				if (ptr != this->Tail->Next) {
+					if (s->cont->Compare(*ptr->cont)) {
 						temp = s->cont;
 						s->cont = ptr->cont;
 						ptr->cont = temp;

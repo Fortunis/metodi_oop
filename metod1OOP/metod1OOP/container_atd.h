@@ -7,8 +7,7 @@ namespace simple_shapes {
 	// реализации контейнера не требуется
 	class shape;
 	// Простейший контейнер на основе одномерного массива
-	class container
-	{
+	class container {
 		int size = 0;
 
 		shape *cont = nullptr;

@@ -1,2 +1,27 @@
 Filled container. 
-Container contains 1 elements.
+Container is filled:
+Container contains 8 elements.
+0: It is Ball: r = 2, Density = 1
+temperature = 7
+volume = 33.4933
+1: It is Ball: r = 1, Density = 4
+temperature = 7
+volume = 4.18667
+2: It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+temperature = 7
+volume = 6
+3: It is Tetrahedron: l = 6, Density = 18
+temperature = 7
+volume = 25.4558
+4: It is Parallelepiped: a = 3, b = 2, c = 1, Density = 15
+temperature = 7
+volume = 6
+5: It is Ball: r = 3, Density = 2
+temperature = 7
+volume = 113.04
+6: It is Ball: r = 4, Density = 2
+temperature = 7
+volume = 267.947
+7: It is Ball: r = 5, Density = 2
+temperature = 7
+volume = 523.333

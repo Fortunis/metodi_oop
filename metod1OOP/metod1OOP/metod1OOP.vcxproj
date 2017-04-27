@@ -130,6 +130,7 @@
     <ClInclude Include="FilesCmp.h" />
     <ClInclude Include="ParallelepipedTest.h" />
     <ClInclude Include="parallelepiped_atd.h" />
+    <ClInclude Include="ShapeTest.h" />
     <ClInclude Include="shape_atd.h" />
     <ClInclude Include="TetrahedronTest.h" />
     <ClInclude Include="tetrahedron_atd.h" />

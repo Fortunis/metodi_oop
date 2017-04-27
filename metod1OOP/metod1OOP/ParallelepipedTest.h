@@ -10,8 +10,7 @@ using namespace simple_shapes;
 class ParallelepipedTest : public ::testing::Test {
 };
 
-TEST_F(ParallelepipedTest, CheckVolume)
-{
+TEST_F(ParallelepipedTest, CheckVolume) {
 	parallelepiped p;
 	p.a = 1;
 	p.b = 2;
@@ -21,8 +20,7 @@ TEST_F(ParallelepipedTest, CheckVolume)
 	ASSERT_EQ(expected, p.Volume());
 }
 
-TEST_F(ParallelepipedTest, CheckInput)
-{
+TEST_F(ParallelepipedTest, CheckInput) {
 	ifstream ifst("InParallelepiped.txt");
 	parallelepiped actual;
 	actual.InData(ifst);
@@ -38,8 +36,7 @@ TEST_F(ParallelepipedTest, CheckInput)
 	ASSERT_NEAR(actual.d, p.d, 0.01);
 }
 
-/*TEST_F(ParallelepipedTest, CheckOutput)
-{
+/*TEST_F(ParallelepipedTest, CheckOutput) {
 	ofstream ofst("OutTest.txt");
 	parallelepiped p;
 	p.a = 2;
