@@ -50,4 +50,22 @@ namespace simple_shapes {
 		}
 		return l*l*l*sqrt(2)/12;
 	}
+
+	void tetrahedron::MultiMethod(shape *other, ofstream &ofst) {
+		other->MMTetrahedron(ofst);
+	}
+
+	void tetrahedron::MMBall(ofstream &ofst) {
+		ofst << "Ball and Tetrahedron" << endl;
+	}
+
+
+	void tetrahedron::MMParallelepiped(ofstream &ofst) {
+		ofst << "Parallelepiped and Tetrahedron" << endl;
+	}
+
+	void tetrahedron::MMTetrahedron(ofstream &ofst) {
+		ofst << "Tetrahedron and Tetrahedron" << endl;
+	}
+
 } // end simple_shapes namespace

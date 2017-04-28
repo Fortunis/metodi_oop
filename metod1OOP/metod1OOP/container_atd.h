@@ -26,6 +26,8 @@ namespace simple_shapes {
 
 		void Sort();   // сортировка контейнера
 
+		void MultiMethod(ofstream &ofst);
+
 		container() {};
 		~container() { Clear(); };
 	};

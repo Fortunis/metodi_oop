@@ -1,11 +1,11 @@
 #include <iostream>
 #include <fstream>
 #include "container_atd.h"
-#include "ContainerTest.h"
+//#include "ContainerTest.h"
 //#include "ShapeTest.h"
-#include "BallTest.h"
-#include "ParallelepipedTest.h"
-#include "TetrahedronTest.h"
+//#include "BallTest.h"
+//#include "ParallelepipedTest.h"
+//#include "TetrahedronTest.h"
 #include "gtest/gtest.h"
 
 using namespace std;
@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
 	ofst << "Filled container. " << endl;
 	//ofst << "Sorted container. " << endl;
 	//c.Sort();
-	c.Volume(ofst);
+	c.MultiMethod(ofst);
 	//c.Out(ofst);
 	//c.Clear();
 	//ofst << "Empty container. " << endl;

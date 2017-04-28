@@ -20,6 +20,11 @@ namespace simple_shapes {
 		virtual void OutParallelepiped(ofstream &ofst);
 		virtual void OutTetrahedron(ofstream &ofst);
 
+		virtual void MultiMethod(shape *other, ofstream &ofst) = 0;
+		virtual void MMBall(ofstream &ofst) = 0;
+		virtual void MMParallelepiped(ofstream &ofst) = 0;
+		virtual void MMTetrahedron(ofstream &ofst) = 0;
+
 		bool Compare(shape &other);
 
 	};

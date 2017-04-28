@@ -12,6 +12,12 @@ namespace simple_shapes {
 		void Out(ofstream &ofst);
 		double Volume();
 		void OutParallelepiped(ofstream &ofst);
+
+		void MultiMethod(shape *other, ofstream &ofst);
+		void MMBall(ofstream &ofst);
+		void MMParallelepiped(ofstream &ofst);
+		void MMTetrahedron(ofstream &ofst);
+
 		parallelepiped() {};
 		~parallelepiped() {};
 	};

@@ -52,4 +52,21 @@ namespace simple_shapes {
 		return 4 * 3.14*r*r*r / 3;
 	}
 
+	void ball::MultiMethod(shape *other, ofstream &ofst) {
+		other->MMBall(ofst);
+	}
+
+	void ball::MMBall(ofstream &ofst) {
+		ofst << "Ball and Ball" << endl;
+	}
+
+
+	void ball::MMParallelepiped(ofstream &ofst) {
+		ofst << "Parallelepiped and Ball" << endl;
+	}
+
+	void ball::MMTetrahedron(ofstream &ofst) {
+		ofst << "Tetrahedron and Ball" << endl;
+	}
+
 } // end simple_shapes namespace

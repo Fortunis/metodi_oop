@@ -14,6 +14,12 @@ namespace simple_shapes {
 		double Volume();
 
 		void OutBall(ofstream &ofst);
+		
+		// мультиметод
+		void MultiMethod(shape *other, ofstream &ofst);
+		void MMBall(ofstream &ofst);
+		void MMParallelepiped(ofstream &ofst);
+		void MMTetrahedron(ofstream &ofst);
 
 		ball() {};
 		~ball() {};

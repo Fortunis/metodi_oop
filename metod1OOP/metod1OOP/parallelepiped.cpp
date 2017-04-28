@@ -53,4 +53,23 @@ namespace simple_shapes {
 		}
 		return a*b*c;
 	}
+
+	//-----------------------------------------------------
+	// мультиметод
+	void parallelepiped::MultiMethod(shape *other, ofstream &ofst) {
+		other->MMParallelepiped(ofst);
+	}
+
+	void parallelepiped::MMBall(ofstream &ofst) {
+		ofst << "Ball and Parallelepiped" << endl;
+	}
+
+	void parallelepiped::MMParallelepiped(ofstream &ofst) {
+		ofst << "Parallelepiped and Parallelepiped" << endl;
+	}
+
+	void parallelepiped::MMTetrahedron(ofstream &ofst) {
+		ofst << "Tetrahedron and Parallelepiped" << endl;
+	}
+
 } // end simple_shapes namespace

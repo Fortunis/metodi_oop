@@ -1,6 +1,9 @@
-﻿  container.cpp
-  Создание кода...
-  Пропуск... (изменения не обнаружены)
+﻿  tetrahedron.cpp
+  shape.cpp
+  parallelepiped.cpp
   main.cpp
-  metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\Женя\5\metod1OOP\Debug\metod1OOP.exe
-  metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\Женя\5\metod1OOP\Debug\metod1OOP.pdb (Partial PDB)
+  container.cpp
+  ball.cpp
+  Создание кода...
+  metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\Женя\7b\metod1OOP\Debug\metod1OOP.exe
+  metod1OOP.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\Женя\7b\metod1OOP\Debug\metod1OOP.pdb (Partial PDB)

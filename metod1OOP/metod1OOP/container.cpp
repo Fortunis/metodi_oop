@@ -221,4 +221,19 @@ namespace simple_shapes {
 		}
 	}
 
+	void container::MultiMethod(ofstream &ofst) {
+		ofst << "Multimethod." << endl;
+		container* temp = nullptr;
+		for (int i = 0; i < size; i++) {
+			current = current->next;
+			temp = current;
+			for (int j = 0; j < size; j++) {
+				current->cont->MultiMethod(temp->cont, ofst);
+				current->cont->Out(ofst);
+				temp->cont->Out(ofst);
+				temp = temp->next;
+			}
+		}
+	}
+
 } // end simple_shapes namespace
