@@ -7,16 +7,15 @@ namespace simple_shapes {
 	class tetrahedron :public shape {
 	public:
 		int l; // длина стороны
-		float d; //плотность(density)
 		void InData(ifstream &ifst);
-		void Out(ofstream &ofst);
+		void Out(ostream &ofst);
 		double Volume();
-		void OutTetrahedron(ofstream &ofst);
+		void OutTetrahedron(ostream &ofst);
 
-		void MultiMethod(shape *other, ofstream &ofst);
-		void MMBall(ofstream &ofst);
-		void MMParallelepiped(ofstream &ofst);
-		void MMTetrahedron(ofstream &ofst);
+		void MultiMethod(shape *other, ostream &ofst);
+		void MMBall(ostream &ofst);
+		void MMParallelepiped(ostream &ofst);
+		void MMTetrahedron(ostream &ofst);
 
 		tetrahedron() {};
 		~tetrahedron() {};

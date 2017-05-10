@@ -58,7 +58,7 @@ namespace simple_shapes {
 
 
 	// ¬ывод содержимого контейнера в указанный поток
-	void container::Out(ofstream &ofst) {
+	void container::Out(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
 			return;
@@ -81,6 +81,7 @@ namespace simple_shapes {
 
 				currentshape = current->cont;
 				currentshape->Out(ofst);
+				currentshape->Out(cout);
 
 				currentshape = nullptr;
 				delete currentshape;
@@ -89,7 +90,7 @@ namespace simple_shapes {
 	}
 
 
-	void container::Volume(ofstream &ofst) {
+	void container::Volume(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
 			return;
@@ -110,6 +111,7 @@ namespace simple_shapes {
 				current = current->next;
 				currentshape = current->cont;
 				currentshape->Out(ofst);
+				currentshape->Out(cout);
 				ofst << "volume = " << currentshape->Volume() << endl;
 				currentshape = nullptr;
 				delete currentshape;
@@ -117,7 +119,7 @@ namespace simple_shapes {
 		}
 	}
 
-	void container::OutBall(ofstream &ofst) {
+	void container::OutBall(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
 			exit(1);
@@ -136,6 +138,7 @@ namespace simple_shapes {
 
 				currentshape = current->cont;
 				currentshape->OutBall(ofst);
+				currentshape->OutBall(cout);
 
 				currentshape = nullptr;
 				delete currentshape;
@@ -143,7 +146,7 @@ namespace simple_shapes {
 		}
 	}
 
-	void container::OutParallelepiped(ofstream &ofst) {
+	void container::OutParallelepiped(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
 			exit(1);
@@ -162,6 +165,7 @@ namespace simple_shapes {
 
 				currentshape = current->cont;
 				currentshape->OutParallelepiped(ofst);
+				currentshape->OutParallelepiped(cout);
 
 				currentshape = nullptr;
 				delete currentshape;
@@ -169,7 +173,7 @@ namespace simple_shapes {
 		}
 	}
 
-	void container::OutTetrahedron(ofstream &ofst) {
+	void container::OutTetrahedron(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
 			exit(1);
@@ -188,6 +192,7 @@ namespace simple_shapes {
 
 				currentshape = current->cont;
 				currentshape->OutTetrahedron(ofst);
+				currentshape->OutTetrahedron(cout);
 
 				currentshape = nullptr;
 				delete currentshape;
@@ -197,7 +202,7 @@ namespace simple_shapes {
 
 	//-----------------------------------------------------
 	// —ортировка содержимого контейнера
-	void container::Sort() {
+	void container::Sort(int des) {
 		container *s, *ptr;
 		shape *temp;
 		if (this->tail == nullptr) {
@@ -209,10 +214,25 @@ namespace simple_shapes {
 			ptr = s->next;
 			while (ptr != this->tail->next) {
 				if (ptr != this->tail->next) {
-					if (s->cont->Compare(*ptr->cont)) {
-						temp = s->cont;
-						s->cont = ptr->cont;
-						ptr->cont = temp;
+					switch (des) 
+					{
+						case 0:
+							if (s->cont->Compare(*ptr->cont)) {
+								temp = s->cont;
+								s->cont = ptr->cont;
+								ptr->cont = temp;
+							}
+							break;
+						case 1:
+							if (!s->cont->Compare(*ptr->cont)) {
+								temp = s->cont;
+								s->cont = ptr->cont;
+								ptr->cont = temp;
+							}
+							break;
+						default:
+							cerr << "Unknown des!" << endl;
+							exit(1);
 					}
 				}
 				ptr = ptr->next;
@@ -221,7 +241,7 @@ namespace simple_shapes {
 		}
 	}
 
-	void container::MultiMethod(ofstream &ofst) {
+	void container::MultiMethod(ostream &ofst) {
 		ofst << "Multimethod." << endl;
 		container* temp = nullptr;
 		for (int i = 0; i < size; i++) {
@@ -230,7 +250,9 @@ namespace simple_shapes {
 			for (int j = 0; j < size; j++) {
 				current->cont->MultiMethod(temp->cont, ofst);
 				current->cont->Out(ofst);
+				current->cont->Out(cout);
 				temp->cont->Out(ofst);
+				temp->cont->Out(cout);
 				temp = temp->next;
 			}
 		}

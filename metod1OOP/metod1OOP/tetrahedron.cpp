@@ -11,12 +11,12 @@ namespace simple_shapes {
 			cerr << "Error: no input file!" << endl;
 			exit(1);
 		}
-		ifst >> l >> d;
+		ifst >> l;
 		if (ifst.fail()) {
 			cout << "Wrong input!" << endl;
 			exit(1);
 		}
-		if (l <= 0 || d <= 0) {
+		if (l <= 0 ) {
 			cerr << "Error: Incorrect values in tetrahedron input" << endl;
 			exit(1);
 		}
@@ -24,17 +24,17 @@ namespace simple_shapes {
 	}
 
 	// Вывод параметров шараа в поток
-	void tetrahedron::Out(ofstream &ofst) {
+	void tetrahedron::Out(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
 		}
-		ofst << "It is Tetrahedron: l = " << l << ", Density = " << d << endl;
+		ofst << "It is Tetrahedron: l = " << l << endl;
 		shape::Out(ofst);
 		ofst << endl;
 	}
 
-	void tetrahedron::OutTetrahedron(ofstream &ofst) {
+	void tetrahedron::OutTetrahedron(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
@@ -51,20 +51,20 @@ namespace simple_shapes {
 		return l*l*l*sqrt(2)/12;
 	}
 
-	void tetrahedron::MultiMethod(shape *other, ofstream &ofst) {
+	void tetrahedron::MultiMethod(shape *other, ostream &ofst) {
 		other->MMTetrahedron(ofst);
 	}
 
-	void tetrahedron::MMBall(ofstream &ofst) {
+	void tetrahedron::MMBall(ostream &ofst) {
 		ofst << "Ball and Tetrahedron" << endl;
 	}
 
 
-	void tetrahedron::MMParallelepiped(ofstream &ofst) {
+	void tetrahedron::MMParallelepiped(ostream &ofst) {
 		ofst << "Parallelepiped and Tetrahedron" << endl;
 	}
 
-	void tetrahedron::MMTetrahedron(ofstream &ofst) {
+	void tetrahedron::MMTetrahedron(ostream &ofst) {
 		ofst << "Tetrahedron and Tetrahedron" << endl;
 	}
 

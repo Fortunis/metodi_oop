@@ -17,16 +17,16 @@ namespace simple_shapes {
 		void Clear();
 		void Add(shape &s);
 		void In(ifstream &ifst);
-		void Out(ofstream &ofst);
-		void Volume(ofstream &ofst);
+		void Out(ostream &ofst);
+		void Volume(ostream &ofst);
 
-		void OutBall(ofstream &ofst);
-		void OutParallelepiped(ofstream &ofst);
-		void OutTetrahedron(ofstream &ofst);
+		void OutBall(ostream &ofst);
+		void OutParallelepiped(ostream &ofst);
+		void OutTetrahedron(ostream &ofst);
 
-		void Sort();   // сортировка контейнера
+		void Sort(int des);   // сортировка контейнера
 
-		void MultiMethod(ofstream &ofst);
+		void MultiMethod(ostream &ofst);
 
 		container() {};
 		~container() { Clear(); };

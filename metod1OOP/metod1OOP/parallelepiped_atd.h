@@ -6,17 +6,16 @@ namespace simple_shapes {
 	class parallelepiped: public shape {
 	public:
 		int a, b, c; // стороны
-		float d; //плотность(density)
 
 		void InData(ifstream &ifst);
-		void Out(ofstream &ofst);
+		void Out(ostream &ofst);
 		double Volume();
-		void OutParallelepiped(ofstream &ofst);
+		void OutParallelepiped(ostream &ofst);
 
-		void MultiMethod(shape *other, ofstream &ofst);
-		void MMBall(ofstream &ofst);
-		void MMParallelepiped(ofstream &ofst);
-		void MMTetrahedron(ofstream &ofst);
+		void MultiMethod(shape *other, ostream &ofst);
+		void MMBall(ostream &ofst);
+		void MMParallelepiped(ostream &ofst);
+		void MMTetrahedron(ostream &ofst);
 
 		parallelepiped() {};
 		~parallelepiped() {};

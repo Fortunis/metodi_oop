@@ -10,7 +10,6 @@ using namespace std;
 namespace simple_shapes {
 	// Ввод параметров обобщенной фигуры из файла
 	shape* shape::In(ifstream &ifst) {
-		shape *sp;
 		int k;
 		if (!ifst) {
 			cerr << "Error: no input file!" << endl;
@@ -29,6 +28,7 @@ namespace simple_shapes {
 			cerr << "Error: no data after type!" << endl;
 			exit(1);
 		}
+		shape *sp;
 		switch (k) {
 			case 1:
 				sp = new ball;
@@ -47,36 +47,43 @@ namespace simple_shapes {
 	}
 
 
-	void shape::OutBall(ofstream &ofst) {
+	void shape::OutBall(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
 		}
 		return;
-		//ofst << endl;  // пустая строка
 	}
 
-	void shape::OutParallelepiped(ofstream &ofst) {
+	void shape::OutParallelepiped(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
 		}
 		return;
-		//ofst << endl;  // пустая строка
 	}
-	void shape::OutTetrahedron(ofstream &ofst) {
+	void shape::OutTetrahedron(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
 		}
 		return;
-		//ofst << endl;  // пустая строка
 	}
 	//----------------------------------------------------
 	// Ввод параметров фигуры
 	void shape::InData(ifstream &ifst) {
 		if (!ifst) {
 			cerr << "Error: no input file!" << endl;
+			exit(1);
+		}
+		ifst >> d;
+		if (d <= 0)
+		{
+			cerr << "Wrong density!" << endl;
+			exit(1);
+		}
+		if (ifst.fail()) {
+			cout << "Wrong input!" << endl;
 			exit(1);
 		}
 		ifst >> temperature;
@@ -88,11 +95,12 @@ namespace simple_shapes {
 
 	//----------------------------------------------------
 	// Вывод параметров фигуры
-	void shape::Out(ofstream &ofst) {
+	void shape::Out(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
 		}
+		ofst << "density = " << d;
 		ofst << "temperature = " << temperature;
 	}
 

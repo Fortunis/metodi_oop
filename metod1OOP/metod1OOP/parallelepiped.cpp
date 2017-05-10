@@ -11,12 +11,12 @@ namespace simple_shapes {
 			cerr << "Error: no input file!" << endl;
 			exit(1);
 		}
-		ifst >> a >> b >> c >> d;
+		ifst >> a >> b >> c;
 		if (ifst.fail()) {
 			cout << "Wrong input!" << endl;
 			exit(1);
 		}
-		if (a <= 0 || b <= 0 || c <= 0 || d <= 0) {
+		if (a <= 0 || b <= 0 || c <= 0 ) {
 			cerr << "Error: Incorrect values in parallelepiped input" << endl;
 			exit(1);
 		}
@@ -24,20 +24,19 @@ namespace simple_shapes {
 	}
 
 	// Вывод параметров параллелепипеда в поток
-	void parallelepiped::Out(ofstream &ofst) {
+	void parallelepiped::Out(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
 		}
 		ofst << "It is Parallelepiped: a = "
 		<< a << ", b = " << b
-		<< ", c = " << c 
-		<< ", Density = " << d << endl;
+		<< ", c = " << c << endl;
 		shape::Out(ofst);
 		ofst << endl;
 	}
 
-	void parallelepiped::OutParallelepiped(ofstream &ofst) {
+	void parallelepiped::OutParallelepiped(ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
@@ -56,19 +55,19 @@ namespace simple_shapes {
 
 	//-----------------------------------------------------
 	// мультиметод
-	void parallelepiped::MultiMethod(shape *other, ofstream &ofst) {
+	void parallelepiped::MultiMethod(shape *other, ostream &ofst) {
 		other->MMParallelepiped(ofst);
 	}
 
-	void parallelepiped::MMBall(ofstream &ofst) {
+	void parallelepiped::MMBall(ostream &ofst) {
 		ofst << "Ball and Parallelepiped" << endl;
 	}
 
-	void parallelepiped::MMParallelepiped(ofstream &ofst) {
+	void parallelepiped::MMParallelepiped(ostream &ofst) {
 		ofst << "Parallelepiped and Parallelepiped" << endl;
 	}
 
-	void parallelepiped::MMTetrahedron(ofstream &ofst) {
+	void parallelepiped::MMTetrahedron(ostream &ofst) {
 		ofst << "Tetrahedron and Parallelepiped" << endl;
 	}
 
